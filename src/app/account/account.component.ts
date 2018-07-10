@@ -6,11 +6,11 @@ import {AccountsService} from '../accounts.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService, AccountsService]
+  providers: [LoggingService]
 })
 export class AccountComponent {
   @Input() account: {name: string, status: string};
-  @Input() id: number;
+  @Input() id: string;
 
   constructor(private readonly loggingService: LoggingService,
               private readonly accountsService: AccountsService) {
