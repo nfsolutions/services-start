@@ -13,8 +13,8 @@ export class AccountComponent {
   constructor(private readonly accountsService: AccountsService) {
   }
 
-
   onSetTo(status: string) {
     this.accountsService.updateAccount(this.id, status);
+    this.accountsService.statusUpdated.emit(status);
   }
 }
